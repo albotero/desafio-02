@@ -9,7 +9,7 @@
 ### 1. ¿Cuántos registros hay?
 
 ```sql
-SELECT COUNT(\*) FROM INSCRITOS;
+SELECT COUNT(*) FROM INSCRITOS;
 ```
 
 ![Requerimiento 1](./screenshots/req-1.png)
@@ -25,7 +25,7 @@ SELECT SUM(cantidad) AS total_inscritos FROM INSCRITOS;
 ### 3. ¿Cuál o cuáles son los registros de mayor antigüedad?
 
 ```sql
-SELECT \* FROM INSCRITOS WHERE fecha = (SELECT MIN(fecha) FROM INSCRITOS);
+SELECT * FROM INSCRITOS WHERE fecha = (SELECT MIN(fecha) FROM INSCRITOS);
 ```
 
 ![Requerimiento 3](./screenshots/req-3.png)
@@ -60,7 +60,7 @@ LIMIT 1;
 ### 7. ¿Qué día se inscribieron la mayor cantidad de personas utilizando el blog? ¿Cuántas personas fueron? (si hay más de un registro con el máximo de personas, considera solo el primero)
 
 ```sql
-SELECT \* FROM INSCRITOS
+SELECT * FROM INSCRITOS
 WHERE fuente = 'Blog'
 ORDER BY cantidad DESC
 LIMIT 1;
